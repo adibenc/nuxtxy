@@ -29,12 +29,15 @@ function onContextMenu () {
   })
 
   d.ctxMenu.value = true
-} */
+}
+<div class="container-lg p-2">
+</div>
+*/
 
 </script>
 
 <template>
-<div class="container-lg p-2">
+<UContainer>
 	<div class="flex flex-row p-2">
 		<div class="basis-1/2">
 			<div id="modal">
@@ -43,7 +46,10 @@ function onContextMenu () {
 				<UModal v-model="d.modal">
 				<UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
 					<template #header>
-					<Placeholder class="h-8" />
+						<UButton color="gray" label="x"
+							@click="d.modal = false"
+						/>
+						<Placeholder class="h-8" />
 					</template>
 		
 					<Placeholder class="h-32" />
@@ -60,7 +66,10 @@ function onContextMenu () {
 				<USlideover v-model="d.overlay">
 				<UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
 					<template #header>
-					<Placeholder class="h-8" />
+						<UButton color="gray" label="x"
+							@click="d.overlay = false"
+						/>
+						<Placeholder class="h-8" />
 					</template>
 		
 					<Placeholder class="h-full" />
@@ -111,19 +120,18 @@ function onContextMenu () {
 				<UContainer>
 					<NuxtPage />
 				</UContainer>
-				<UNotifications />
 				<UNotification
 					icon="i-heroicons-check-badge"
 					color="green"
 					:id="6"
 					title="Notification"
 					description="This is a notification."
-					:timeout="600000"
+					:timeout="2000"
 				/>
 				<UButton label="Show toast" @click="toast.add({ title: 'Hello world!' })"/>
 			</div>
 		</div>
 	</div>
-</div>
+</UContainer>
 </template>
 
