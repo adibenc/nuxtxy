@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  nuxt-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nuxt-dev
+    restart: always
+    # ports:
+    #   - "4001:4000"
+    command: "npm run start"  # Replace with your Nuxt.js start command
+
+  # Add an nginx service for production deployment
+  nginuxt:
+    image: nginx:latest
+    container_name: kemoku-nginx
+    restart: always
+    ports:
+      - "3000:80"
+    volumes:
+      - $PWD/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./dist:/usr/share/nginx/html:ro
+    depends_on:
+      - nuxt-dev
