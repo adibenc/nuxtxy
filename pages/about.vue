@@ -1,7 +1,10 @@
 <template>
 	<t-1>
 		<template #content>
-			<h2>abot</h2>
+			<h2 class="">about</h2>
+			<p class="p">
+				Just compiling what is exist at https://ui.nuxt.com/
+			</p>
 		</template>
 	</t-1>
 </template>

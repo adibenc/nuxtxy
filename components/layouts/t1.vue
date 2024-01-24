@@ -4,9 +4,13 @@ const links = [{
 		icon: 'i-heroicons-home',
 		to: '/'
 	}, {
-		label: 'UI',
+		label: 'UI - overlays',
 		icon: 'i-heroicons-chart-bar',
-		to: '/ui'
+		to: '/ui-overlays'
+	}, {
+		label: 'UI - elements',
+		icon: 'i-heroicons-chart-bar',
+		to: '/ui-els'
 	}, {
 		label: 'About',
 		icon: 'i-heroicons-command-line',
@@ -19,14 +23,14 @@ const links = [{
 </script>
 <template>
 	<div>
-		<UContainer 
+		<UContainer
 		class="flex flex-row">
 		<div class="basis-1/4">
 			<UVerticalNavigation :links="links" />
 		</div>
 		<div class="basis-3/4">
 			<UContainer>
-				<div class="flex flex-row p-2">
+				<div>
 					<slot name="content"></slot>
 				</div>
 			</UContainer>
