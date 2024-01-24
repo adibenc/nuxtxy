@@ -4,6 +4,10 @@ export default defineNuxtConfig({
 	modules: ['@nuxt/ui'],
 	components: [
 		{
+			path: '~/components/',
+			pathPrefix: false,
+		},
+		{
 			path: '~/components/layouts',
 			pathPrefix: false,
 		},

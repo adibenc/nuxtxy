@@ -12,6 +12,14 @@ const links = [{
 		icon: 'i-heroicons-chart-bar',
 		to: '/ui-els'
 	}, {
+		label: 'UI - forms',
+		icon: 'i-heroicons-chart-bar',
+		to: '/ui-forms'
+	}, {
+		label: 'UI - data',
+		icon: 'i-heroicons-chart-bar',
+		to: '/ui-data'
+	}, {
 		label: 'About',
 		icon: 'i-heroicons-command-line',
 		to: '/about'
